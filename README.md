@@ -15,40 +15,39 @@ Requirements
     Python 3.x
     Linux-based or Unix-like systems (uses /bin/bash for running ping commands)
 
-Installation
+* Installation * 
 
     Clone the repository:
-
-    bash
-
+  
+```
 git clone https://github.com/nathanbvn/easysweep.git
+```
 
 Navigate into the project directory:
-
-bash
+```
 
     cd easysweep
+```
 
 Usage
 
 You can run EasySweep directly using Python 3. It requires a network IP address and subnet mask in CIDR notation.
 Command:
 
-bash
+```
 
 python3 easysweep.py [network_ip]/[mask]
+```
 
 Example:
-
-bash
-
+```
 python3 easysweep.py 192.168.1.0/24
+```
 
 Output:
 
 The tool will scan the network and display a list of connected (active) IP addresses in the given range:
-
-markdown
+```
 
 ------------- EasySweep ------------------
     SCANNING NETWORK !
@@ -57,8 +56,8 @@ CONNECTED IP's :
 192.168.1.1
 192.168.1.3
 192.168.1.5
-...
 
+```
 How it Works
 
     Network Input: You provide a network in CIDR notation (e.g., 192.168.1.0/24). The tool uses Python’s ipaddress module to generate the list of IPs in the network.
